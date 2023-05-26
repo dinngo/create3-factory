@@ -8,26 +8,25 @@ import {ICREATE3Factory} from "./ICREATE3Factory.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 /// @title Factory for deploying contracts to deterministic addresses via CREATE3
-/// @author zefram.eth
-/// @notice Enables deploying contracts using CREATE3. Each deployer (msg.sender) has
-/// its own namespace for deployed addresses.
+/// @author furucombo
+
 contract CREATE3Factory is ICREATE3Factory, Ownable {
     /// @inheritdoc	ICREATE3Factory
+    constructor(address deployer) {
+        _transferOwnership(deployer);
+    }
+
     function deploy(
         bytes32 salt,
         bytes memory creationCode
     ) external payable override onlyOwner returns (address deployed) {
-        // hash salt with the deployer address to give each deployer its own namespace
-
         return CREATE3.deploy(salt, creationCode, msg.value);
     }
 
     /// @inheritdoc	ICREATE3Factory
     function getDeployed(
-        address,
         bytes32 salt
     ) external view override returns (address deployed) {
-        // hash salt with the deployer address to give each deployer its own namespace
         return CREATE3.getDeployed(salt);
     }
 }

@@ -38,7 +38,7 @@ A few notes:
 To install with [Foundry](https://github.com/foundry-rs/foundry):
 
 ```
-forge install zeframlou/create3-factory
+forge install dinngo/create3-factory
 ```
 
 ## Local development
