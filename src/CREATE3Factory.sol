@@ -8,12 +8,13 @@ import {ICREATE3Factory} from "./ICREATE3Factory.sol";
 import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 /// @title Factory for deploying contracts to deterministic addresses via CREATE3
+/// @author zefram.eth
 /// @author furucombo
 
 contract CREATE3Factory is ICREATE3Factory, Ownable {
     /// @inheritdoc	ICREATE3Factory
     constructor(address deployer) {
-        _transferOwnership(deployer);
+        transferOwnership(deployer);
     }
 
     function deploy(
