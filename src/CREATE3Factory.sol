@@ -12,11 +12,11 @@ import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 /// @author furucombo
 
 contract CREATE3Factory is ICREATE3Factory, Ownable {
-    /// @inheritdoc	ICREATE3Factory
     constructor(address deployer) {
         transferOwnership(deployer);
     }
 
+    /// @inheritdoc	ICREATE3Factory
     function deploy(
         bytes32 salt,
         bytes memory creationCode
