@@ -9,7 +9,7 @@ However, deployment is often a complex process that involves several transaction
 
 One could use a `CREATE2` factory that deterministically deploys contracts to an address that's unrelated to the deployer's nonce, but the address is still related to the hash of the contract's creation code. This means if you wanted to use different constructor parameters on different chains, the deployed contracts will have different addresses.
 
-A `CREATE3` factory offers the best solution: the address of the deployed contract is determined by only the deployer address and the salt. This makes it far easier to deploy contracts to multiple chains at the same addresses.
+A `CREATE3` factory offers the best solution: the address of the deployed contract is determined by only the salt. This makes it far easier to deploy contracts to multiple chains at the same addresses.
 
 ## Deployments
 
@@ -30,7 +30,6 @@ Call `CREATE3Factory::deploy()` to deploy a contract and `CREATE3Factory::getDep
 
 A few notes:
 
-- The salt provided is hashed together with the deployer address (i.e. msg.sender) to form the final salt, such that each deployer has its own namespace of deployed addresses.
 - The deployed contract should be aware that `msg.sender` in the constructor will be the temporary proxy contract used by `CREATE3` rather than the deployer, so common patterns like `Ownable` should be modified to accomodate for this.
 
 ## Installation
