@@ -11,7 +11,7 @@ contract DeployScript is Script {
 
         vm.startBroadcast(deployerPrivateKey);
 
-        factory = new CREATE3Factory();
+        factory = new CREATE3Factory(vm.addr(deployerPrivateKey));
 
         vm.stopBroadcast();
     }
