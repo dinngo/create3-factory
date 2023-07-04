@@ -24,6 +24,15 @@ A `CREATE3` factory offers the best solution: the address of the deployed contra
 - Polygon Mainnet
 - Gnosis Chain Mainnet
 
+## Ownable deployment
+
+The modified `CREATE3Factory` which is ownable for testing has been deployed to `0x2a36f87b2ec3de23617907461aa3da0cc4bc3f1f` by the above `CREATE3Factory` (`0x9fBB...0ABf`) with the account `0xa3C1C91403F0026b9dd086882aDbC8Cdbc3b3cfB` and the salt `create3.factory` (`0x637265617465332e666163746f72790000000000000000000000000000000000`) on the following networks:
+
+- Ethereum Mainnet
+- Arbitrum Mainnet
+- Optimism Mainnet
+- Polygon Mainnet
+
 ## Usage
 
 Call `CREATE3Factory::deploy()` to deploy a contract and `CREATE3Factory::getDeployed()` to predict the deployment address, it's as simple as it gets.
