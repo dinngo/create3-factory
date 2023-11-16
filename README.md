@@ -13,11 +13,9 @@ A `CREATE3` factory offers the best solution: the address of the deployed contra
 
 ## Deployments
 
-`CREATE3Factory` has been deployed to `0xB9504E656866cCB985Aa3f1Af7b8B886f8485Df6` on the following networks:
+Production `CREATE3Factory` has been deployed to `0xFa3e9a110E6975ec868E9ed72ac6034eE4255B64` by nonce 0 of `0xC3f1bD7ffbD55751Cd80920BEdf8A794c5a83c3f`
 
-- Ethereum Mainnet
-- Arbitrum Mainnet
-- Polygon Mainnet
+Testing `CREATE3Factory` has been deployed to `0xB9504E656866cCB985Aa3f1Af7b8B886f8485Df6` by nonce 0 of `0xDdbe07CB6D77e81802C55bB381546c0DA51163dd`
 
 ## Usage
 
@@ -25,36 +23,12 @@ Call `CREATE3Factory::deploy()` to deploy a contract and `CREATE3Factory::getDep
 
 A few notes:
 
-- The deployed contract should be aware that `msg.sender` in the constructor will be the temporary proxy contract used by `CREATE3` rather than the deployer, so common patterns like `Ownable` should be modified to accomodate for this.
-
-## Installation
-
-To install with [Foundry](https://github.com/foundry-rs/foundry):
-
-```
-forge install dinngo/create3-factory
-```
-
-## Local development
-
-This project uses [Foundry](https://github.com/foundry-rs/foundry) as the development framework.
-
-### Dependencies
-
-```bash
-forge install
-```
-
-### Compilation
-
-```bash
-forge build
-```
+- The deployed contract should be aware that `msg.sender` in the constructor will be the temporary proxy contract used by `CREATE3` rather than the deployer, so common patterns like `Ownable` should be modified to accommodate for this.
 
 ### Deployment
 
 Make sure that the network is defined in foundry.toml, then run:
 
 ```bash
-./deploy/deploy.sh [network]
+forge script script/Deploy.s.sol -f <NETWORK> -vvvv --json --broadcast --verify --legacy --with-gas-price <GAS-IN-WEI>
 ```

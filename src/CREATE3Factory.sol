@@ -9,7 +9,7 @@ import {Ownable} from "openzeppelin-contracts/contracts/access/Ownable.sol";
 
 /// @title Factory for deploying contracts to deterministic addresses via CREATE3
 /// @author zefram.eth
-/// @author furucombo
+/// @author dinngo
 
 contract CREATE3Factory is ICREATE3Factory, Ownable {
     constructor(address deployer) {

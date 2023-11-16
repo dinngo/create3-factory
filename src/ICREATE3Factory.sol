@@ -3,7 +3,7 @@ pragma solidity >=0.6.0;
 
 /// @title Factory for deploying contracts to deterministic addresses via CREATE3
 /// @author zefram.eth
-/// @author furucombo
+/// @author dinngo
 interface ICREATE3Factory {
     /// @notice Deploys a contract using CREATE3
     /// @param salt The deployer-specific salt for determining the deployed contract's address
