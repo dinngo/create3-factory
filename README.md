@@ -13,24 +13,10 @@ A `CREATE3` factory offers the best solution: the address of the deployed contra
 
 ## Deployments
 
-`CREATE3Factory` has been deployed to `0x9fBB3DF7C40Da2e5A0dE984fFE2CCB7C47cd0ABf` on the following networks:
-
-- Ethereum Mainnet
-- Ethereum Goerli Testnet
-- Arbitrum Mainnet
-- Avalanche C-Chain Mainnet
-- Fantom Opera Mainnet
-- Optimism Mainnet
-- Polygon Mainnet
-- Gnosis Chain Mainnet
-
-## Ownable deployment
-
-The modified `CREATE3Factory` which is ownable for testing has been deployed to `0x2a36f87b2ec3de23617907461aa3da0cc4bc3f1f` by the above `CREATE3Factory` (`0x9fBB...0ABf`) with the account `0xa3C1C91403F0026b9dd086882aDbC8Cdbc3b3cfB` and the salt `create3.factory` (`0x637265617465332e666163746f72790000000000000000000000000000000000`) on the following networks:
+`CREATE3Factory` has been deployed to `0xB9504E656866cCB985Aa3f1Af7b8B886f8485Df6` on the following networks:
 
 - Ethereum Mainnet
 - Arbitrum Mainnet
-- Optimism Mainnet
 - Polygon Mainnet
 
 ## Usage
