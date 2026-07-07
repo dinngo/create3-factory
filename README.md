@@ -17,6 +17,22 @@ Production `CREATE3Factory` has been deployed to `0xFa3e9a110E6975ec868E9ed72ac6
 
 Testing `CREATE3Factory` has been deployed to `0xB9504E656866cCB985Aa3f1Af7b8B886f8485Df6` by nonce 0 of `0xDdbe07CB6D77e81802C55bB381546c0DA51163dd`
 
+### DeFi Oracle Meta Mainnet (Chain 138)
+
+Chain 138 is pending deployment for the production `CREATE3Factory` address:
+
+- Network: DeFi Oracle Meta Mainnet
+- Chain ID: `138`
+- RPC alias: `chain138`
+- Expected production address: `0xFa3e9a110E6975ec868E9ed72ac6034eE4255B64`
+- Explorer: `https://blockscout.defi-oracle.io/address/0xFa3e9a110E6975ec868E9ed72ac6034eE4255B64`
+
+The canonical deployer has been prefunded and remains at nonce `0`; see `docs/CHAIN138_CANONICAL_DEPLOYMENT_REQUEST.md` for the exact request package.
+
+For integration testing only, a non-canonical fallback factory is live at `0x486B2E145F486eFA0190a60259B5BB464BD6b22b`. This fallback should not replace the canonical cross-chain factory address.
+
+After deployment, verify that the canonical address above has bytecode before using it as a prerequisite for canonical Protocolink Router deployments.
+
 ## Usage
 
 Call `CREATE3Factory::deploy()` to deploy a contract and `CREATE3Factory::getDeployed()` to predict the deployment address, it's as simple as it gets.
